@@ -13,7 +13,7 @@ export class StaticSiteHostingStack extends Stack {
       websiteIndexDocument: "index.html",
     });
 
-    new BucketDeployment(this, "DeployMeWithEfsStorage", {
+    new BucketDeployment(this, "BucketDeployment", {
       sources: [Source.asset("./site-content")],
       destinationBucket: bucket,
       retainOnDelete: false,
