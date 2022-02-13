@@ -18,5 +18,16 @@ export class StaticSiteHostingStack extends Stack {
       destinationBucket: bucket,
       retainOnDelete: false,
     });
+
+    // new CloudFrontWebDistribution(this, "WebDistribution", {
+    //   originConfigs: [
+    //     {
+    //       s3OriginSource: {
+    //         s3BucketSource: bucket,
+    //       },
+    //       behaviors: [{ isDefaultBehavior: true }],
+    //     },
+    //   ],
+    // });
   }
 }
